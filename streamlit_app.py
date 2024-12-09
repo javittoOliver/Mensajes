@@ -103,7 +103,7 @@ def generar_recomendacion(nombre):
       Además, utiliza la información del día actual (Hoy es {hoy}) para identificar la fase lunar 
       y la posición de los planetas, buscando un vínculo simbólico o astrológico que resuene con 
       el nombre o la situación general. Este mensaje también debe ser breve y sin introducciones.
-    Asegúrate de que ambos párrafos sean creativos, positivos y tengan un tono cálido y amigable.
+    Asegúrate de que ambos párrafos sean creativos, y usa emojis eventualmente!
         
     """
     
