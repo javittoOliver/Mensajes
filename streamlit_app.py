@@ -163,7 +163,7 @@ def mostrar_resultados(recomendacion):
         recomendacion_html = recomendacion.replace("\n", "<br>")
         st.markdown(
         f"""
-        <div style="background-color: #FDEBD9; padding: 10px; border-radius: 7px; color: #606062;
+        <div style="background-color: #FCF3EA; padding: 10px; border-radius: 7px; color: #606062;
         font-size: 16px; font-weight: 600; line-height: 1;">
         <br>{recomendacion_html}<br>
         <br>
