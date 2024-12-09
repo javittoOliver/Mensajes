@@ -187,7 +187,7 @@ def mostrar_resultados(recomendacion):
 # Mostrar la URL de ngrok generada
 #print(f"Streamlit is running on: {public_url}")
 
-# Cargar la imagen Loope in Hiwork
+
 # Descargar la imagen desde la URL
 response = requests.get(ruta_imagen)
 
@@ -209,8 +209,8 @@ st.markdown(
     f"""
     <style>
     .responsive-img {{
-        width: 30%;
-        max-width: 100px;
+        width: 35%;
+        max-width: 200px;
         height: auto;
     }}
     </style>
