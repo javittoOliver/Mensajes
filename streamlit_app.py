@@ -1,18 +1,12 @@
 import streamlit as st
 import pandas as pd
 import re  
-from unicodedata import normalize
 import os
-import matplotlib.pyplot as plt
 from PIL import Image
 import base64
 from io import BytesIO
-from wordcloud import WordCloud
-from collections import Counter
-from pyngrok import ngrok
 import datetime
 import copy
-import matplotlib.dates as mdates
 from groq import Groq
 from datetime import date
 import requests
@@ -63,32 +57,6 @@ def limpiar_texto(texto):
     
     return texto
 
-# Generar la nube de palabras con la lista de áreas quizás me sirva...
-def mostrar_nube_palabras(areas):
-# Contar la frecuencia de cada palabra en la lista
-    palabras_contadas = Counter(areas)
-    palabras_mas_repeticiones = {palabra: frecuencia for palabra, frecuencia in palabras_contadas.items() if frecuencia >= 1}
-    
-    # Generar la nube de palabras solo con las palabras más frecuentes (por ejemplo, las 5 más frecuentes)
-    wordcloud = WordCloud(width=600, height=380, background_color= 'white').generate_from_frequencies(palabras_mas_repeticiones)
-    
-    # Mostrar la nube de palabras usando matplotlib y Streamlit
-    #plt.figure(figsize=(5, 3))
-    #plt.imshow(wordcloud, interpolation='bilinear')
-    #plt.axis('off')
-    #st.pyplot(plt)
-
-    # Guardar la imagen en un buffer
-    buffer = BytesIO()
-    plt.figure(figsize=(10, 5))
-    plt.imshow(wordcloud, interpolation='bilinear')
-    plt.axis('off')
-    plt.tight_layout()
-    plt.savefig(buffer, format='png')
-    buffer.seek(0)
-    plt.close()
-    
-    return buffer    
 
 def generar_resumen(pregunta, horoscopo):
 
@@ -163,46 +131,6 @@ def generar_recomendacion(nombre):
     
     return response_message
 
-def crear_grafico(datos):
-    # Crear el gráfico de líneas
-    fig, ax = plt.subplots(figsize=(6, 5))
-
-    ax.plot(datos['Fecha de respuesta'], datos['NPS'], marker='o', linestyle='-', color='b')
-
-    # Personalización del gráfico
-    ax.set_title('Tendencia de NPS', fontsize=16)
-    #ax.set_xlabel('Fecha de respuesta', fontsize=12)
-    ax.set_ylabel('NPS', fontsize=12)
-
-    # Eliminar líneas de los ejes x e y (spines)
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-
-    # Eliminar las marcas en los ejes
-    ax.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=True)
-    ax.tick_params(axis='y', which='both', left=False, right=False, labelleft=True)
-
-    # Formato de fechas en el eje X
-    ax.xaxis.set_major_formatter(mdates.DateFormatter('%m/%Y'))  # Formato mm/aaaa
-    ax.xaxis.set_major_locator(mdates.MonthLocator())  # Espaciado mensual
-
-    # Mejorar la visualización de las fechas
-    plt.xticks(rotation=45, ha='right')  # Rotar fechas para mejor legibilidad
-
-    # Agregar un grid (opcional)
-    ax.grid(True, linestyle='--', alpha=0.7)
-
-    # Ajustar los márgenes para que no se corten las fechas
-    plt.tight_layout()
-
-    # Guardar el gráfico en BytesIO
-    img_buffer = BytesIO()
-    plt.savefig(img_buffer, format='png')
-    img_buffer.seek(0)
-    plt.close(fig)
-    return img_buffer
 
 # La función principal, ahora recibe el tópico como parámetro
 def get_tip(nombre):
