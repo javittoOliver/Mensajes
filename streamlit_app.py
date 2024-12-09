@@ -16,7 +16,7 @@ hoy = date.today()
 ruta_imagen = "https://i.ibb.co/BcJHKXf/a7.png"
 
 api_key = "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"
-modelo = 'llama3-70b-8192'
+modelo = 'llama-3.1-70b-versatile'
 
 # Inicializa el cliente de Groq usando la clave API
 client = Groq(
@@ -99,7 +99,7 @@ def generar_recomendacion(nombre):
     de las galletitas de la fortuna.
 
 
-    Luego en un parrafo no muy extenso construye un mensaje motivacional,
+    Luego en un parrafo no muy extenso y sin introducción también, construye un mensaje motivacional,
     controla que tipo de luna deberiamos Hoy es {hoy}, y la posicion de los planetas, 
     busca una relación con mi nombre si existe.
     
