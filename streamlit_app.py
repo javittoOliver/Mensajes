@@ -93,7 +93,7 @@ def generar_resumen(pregunta, horoscopo):
 def generar_recomendacion(nombre):
     prompt = f"""
     
-    Hola, mi nombre es {nombre} (el campo puede estar vacío). (este campo puede estar vacío).
+    Hola, mi nombre es {nombre} (Si está vacío o el nombre no existe solicita que lo corrija, no generes output adicional).
     Genera un mensaje en dos párrafos:
       En el primer párrafo, un mensaje con una breve reflexióin, inspiracional y con predicciones o consejos, 
       divertido y reflexivo como los que se encuentran dentro de las galletas de la fortuna. Este mensaje debe ser directo, 
