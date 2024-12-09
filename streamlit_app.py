@@ -136,7 +136,6 @@ def generar_recomendacion(nombre):
 def get_tip(nombre):
     
     nombre = nombre
-    print(nombre)
     # Recomendaciones
     Reco = generar_recomendacion(nombre)
 
