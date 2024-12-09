@@ -93,15 +93,15 @@ def generar_resumen(pregunta, horoscopo):
 def generar_recomendacion(nombre):
     prompt = f"""
     Hola, mi nombre es {nombre} (el campo puede estar vacío).
-    Quiero que me des un mensaje con una breve reflexione, 
+    Quiero que me des un mensaje con una breve reflexion, 
     frase motivacional, prediccion o consejo que busque inspirarme o divertirme, del estilo de los mensajes impresos en papel dentro
     de las galletitas de la fortuna.
     Genera el mensaje sin introducción, no menciones por ejemplo "Aquí tienes tu mensaje:"
 
 
-    Luego en otro parrafo no muy extenso y sin introducción también, construye un mensaje motivacional,
-    controla que tipo de luna deberiamos Hoy es {hoy}, y la posicion de los planetas, 
-    busca una relación con mi nombre si existe.
+    Luego en otro parrafo no muy extenso y también sin introducción, construye un mensaje motivacional.
+    Controla que tipo de luna deberiamos tener Hoy, (Hoy es {hoy}), la posicion de los planetas  
+    y busca una relación con mi nombre si existe.
     
         
     """
