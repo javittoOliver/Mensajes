@@ -302,7 +302,7 @@ if 'respuestas' in st.session_state:
     for idx, item in enumerate(reversed(st.session_state.respuestas), start=1):
         st.markdown(f"""
         <div style="background-color: #f9f9f9; color: grey; font-weight: bold; font-size: 18px; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
-            ANI Seleccionado: {item['nombre']}
+            {item['nombre']}
         </div>
         """, unsafe_allow_html=True)
 
