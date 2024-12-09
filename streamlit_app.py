@@ -209,7 +209,7 @@ st.markdown(
     f"""
     <style>
     .responsive-img {{
-        width: 35%;
+        width: 30%;
         max-width: 200px;
         height: auto;
     }}
