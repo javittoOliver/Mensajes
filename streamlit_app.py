@@ -92,17 +92,17 @@ def generar_resumen(pregunta, horoscopo):
 
 def generar_recomendacion(nombre):
     prompt = f"""
-    Crea un mensaje único y creativo para una persona cuyo nombre es {nombre} (este campo puede estar vacío).
     
-      En el primer párrafo, genera un mensaje breve que sea inspirador, motivacional, divertido o reflexivo, 
+    Hola, mi nombre es {nombre} (el campo puede estar vacío). (este campo puede estar vacío).
+    Genera un mensaje en dos párrafos:
+      En el primer párrafo, un mensaje breve que sea inspirador, motivacional, divertido o reflexivo, 
       como los que se encuentran dentro de las galletas de la fortuna. Este mensaje debe ser directo, 
       sin introducciones ni frases de apertura como "Aquí tienes tu mensaje".
 
-      En el segundo párrafo, escribe un mensaje motivacional relacionado con el nombre proporcionado, 
-      si es posible. Además, utiliza la información del día actual (Hoy es {hoy}) para identificar la fase lunar 
+      En el segundo párrafo, escribe un mensaje motivacional relacionado con mi nombre si es posible. 
+      Además, utiliza la información del día actual (Hoy es {hoy}) para identificar la fase lunar 
       y la posición de los planetas, buscando un vínculo simbólico o astrológico que resuene con 
       el nombre o la situación general. Este mensaje también debe ser breve y sin introducciones.
-
     Asegúrate de que ambos párrafos sean creativos, positivos y tengan un tono cálido y amigable.
         
     """
