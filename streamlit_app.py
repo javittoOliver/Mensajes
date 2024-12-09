@@ -164,7 +164,7 @@ def mostrar_resultados(recomendacion):
         st.markdown(
         f"""
         <div style="background-color: #FCF3EA; padding: 10px; border-radius: 7px; color: #606062;
-        font-size: 16px; font-weight: 600; line-height: 1; margin-bottom: 10px;">
+        font-size: 16px; font-weight: 600; line-height: 1; margin: 10px 0;">
         <br>{recomendacion_html}<br>
         <br>
         </div>
@@ -258,7 +258,7 @@ if nombre_ingresado:  # Verifica que se haya ingresado algo
                 indicadores = resultados.get('indicadores', 'No hay indicadores')
                 recomendacion = resultados.get('recomendacion', 'No hay recomendación')
 
-                # Usar st.markdown para mostrar el ANI y estilo
+                # Usar st.markdown para mostrar el Nombre y estilo
                 nombre = item.get('nombre', 'N/A')
                 st.markdown(f"""
                     <div style="background-color: #f9f9f9; color: grey; font-weight: bold; font-size: 18px; padding: 10px; border-radius: 5px;">
