@@ -262,7 +262,7 @@ if nombre_ingresado:  # Verifica que se haya ingresado algo
                 nombre = item.get('nombre', 'N/A')
                 st.markdown(f"""
                     <div style="background-color: #f9f9f9; color: grey; font-weight: bold; font-size: 18px; padding: 10px; border-radius: 5px;">
-                        {len(st.session_state['historial_resultados']) - idx} - Nombre ingresado: {nombre}
+                        {len(st.session_state['historial_resultados'])} {nombre}
                     </div>
                 """, unsafe_allow_html=True)
 
