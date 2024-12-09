@@ -95,7 +95,7 @@ def generar_recomendacion(nombre):
     
     Hola, mi nombre es {nombre} (el campo puede estar vacío). (este campo puede estar vacío).
     Genera un mensaje en dos párrafos:
-      En el primer párrafo, un mensaje con una breve reflexióin, inspiracional, motivacional o con predicciones, 
+      En el primer párrafo, un mensaje con una breve reflexióin, inspiracional y con predicciones o consejos, 
       divertido y reflexivo como los que se encuentran dentro de las galletas de la fortuna. Este mensaje debe ser directo, 
       sin introducciones ni frases de apertura como "Aquí tienes tu mensaje".
 
