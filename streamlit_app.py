@@ -13,7 +13,7 @@ import requests
 
 hoy = date.today()
 
-ruta_imagen = "https://i.ibb.co/1sbVFW0/a9.png"
+ruta_imagen = "https://i.ibb.co/BV5Y1nY/a9.png"
 
 api_key = "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"
 modelo = 'llama-3.1-70b-versatile'
@@ -208,8 +208,8 @@ st.markdown(
     f"""
     <style>
     .responsive-img {{
-        width: 40%;
-        max-width: 500px;
+        width: 30%;
+        max-width: 100px;
         height: auto;
     }}
     </style>
