@@ -1,2 +1,16 @@
 streamlit
-openai
+numpy==1.23.5
+pandas==1.5.3
+openai==0.28
+groq
+openpyxl
+soundfile
+torch
+pandasai
+langchain-groq
+googletrans
+deep-translator
+nltk
+openpyxl
+xlsxwriter
+request
