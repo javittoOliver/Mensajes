@@ -13,7 +13,7 @@ import requests
 
 hoy = date.today()
 
-ruta_imagen = "https://i.ibb.co/55V9PX0/a8.png"
+ruta_imagen = "https://i.ibb.co/BcJHKXf/a7.png"
 
 api_key = "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"
 modelo = 'llama-3.1-70b-versatile'
