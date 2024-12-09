@@ -168,6 +168,7 @@ def mostrar_resultados(recomendacion):
         <br>{recomendacion_html}<br>
         <br>
         </div>
+        <br>
         <hr style="border: 1px solid #606062; margin-top: 10px;">
         """,
         unsafe_allow_html=True
