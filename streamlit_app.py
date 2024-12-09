@@ -219,23 +219,23 @@ st.markdown(
     unsafe_allow_html=True
     )
 
-# Ingreso de ANI
+# Ingreso de Nombre
 st.subheader("Ingresá tu Nombre")
 nombre_ingresado = st.text_input("tu nombre?:", "")
 
 if nombre_ingresado:  # Verifica que se haya ingresado algo
-    # Verificar si se ha ingresado un nuevo ANI
+    # Verificar si se ha ingresado un nuevo Nombre
     if 'nombre' not in st.session_state or st.session_state['nombre'] != nombre_ingresado:
         st.session_state['nombre'] = nombre_ingresado
 
-        # Obtener resultados para el nuevo ANI
+        # Obtener resultados para el nuevo Nombre
         nuevo_resultado = get_tip(nombre_ingresado)
 
         # Inicializar el historial si no existe
         if 'historial_resultados' not in st.session_state:
             st.session_state['historial_resultados'] = []
 
-        # Eliminar los resultados previos del historial para este ANI si ya existían
+        # Eliminar los resultados previos del historial para este Nombre si ya existían
         st.session_state['historial_resultados'] = [
             entry for entry in st.session_state['historial_resultados'] 
             if entry['nombre'] != nombre_ingresado
@@ -266,7 +266,7 @@ if nombre_ingresado:  # Verifica que se haya ingresado algo
                     </div>
                 """, unsafe_allow_html=True)
 
-                # Mostrar los detalles de los resultados para este ANI
+                # Mostrar los detalles de los resultados para este Nombre
                 mostrar_resultados(recomendacion)
             else:
                 st.warning(f"El item {idx+1} no tiene resultados válidos.")
