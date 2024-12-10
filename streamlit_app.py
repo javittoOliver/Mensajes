@@ -97,8 +97,7 @@ def generar_recomendacion(nombre):
     Genera un mensaje en dos párrafos:
       En el primer párrafo, un mensaje con una breve reflexióin, inspiracional y con predicciones o consejos, 
       divertido y reflexivo como los que se encuentran dentro de las galletas de la fortuna. Este mensaje debe ser directo, 
-      sin introducciones ni frases de apertura como "Aquí tienes tu mensaje", y buscá acciones o palabras de personas
-      muy conocidas históricamente, que tengan mi nombre, para generar una anlogía o citas, como un ejemplo!
+      sin introducciones ni frases de apertura como "Aquí tienes tu mensaje".
 
       En el segundo párrafo, escribe un mensaje motivacional relacionado con mi nombre si es posible. 
       Además, utiliza la información del día actual (Hoy es {hoy}) para identificar la fase lunar 
