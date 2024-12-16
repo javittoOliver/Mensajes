@@ -99,11 +99,11 @@ def generar_recomendacion(nombre):
       divertido y reflexivo como los que se encuentran dentro de las galletas de la fortuna. Este mensaje debe ser directo, 
       sin introducciones ni frases de apertura como "Aquí tienes tu mensaje".
 
-      En el segundo párrafo, escribe un mensaje motivacional relacionado con mi nombre si es posible. 
-      Además, utiliza la información del día actual (Hoy es {hoy}) para identificar la fase lunar 
-      y la posición de los planetas, buscando un vínculo simbólico o astrológico que resuene con 
+      En el segundo párrafo, escribe un mensaje astrológico relacionado con mi nombre si es posible. 
+      Además, utiliza la información del día actual (Hoy es {hoy}) para encontrar aspectos relevantes del día como  
+      la posición de los planetas o tránsitos importantes y la fase lunar. Buscando un vínculo simbólico o astrológico que resuene con 
       el nombre o la situación general. Este mensaje también debe ser breve y sin introducciones.
-    Asegúrate de que ambos párrafos sean creativos, y usa emojis eventualmente!
+    Asegúrate de que ambos párrafos sean muy creativos, y usa emojis eventualmente!
         
     """
     
@@ -284,7 +284,8 @@ else:
 # Preguntas sobre los comentarios
 if "comentarios" in st.session_state:
     st.subheader("¿Querés hacerme alguna pregunta respecto al mensaje?")
-    pregunta = st.text_area("Escribe la pregunta o solicitud y haz click en 'Preguntar'", height=150)
+    pregunta = st.text_area(f"""Escribe la pregunta o solicitud y haz click en 'Preguntar' Ej:\n 
+                                Explicame la influencia de los planetas """, height=150)
     
     if st.button("Preguntar"):
         resumen = generar_resumen(pregunta, st.session_state.comentarios)
