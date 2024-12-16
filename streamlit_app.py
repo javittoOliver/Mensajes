@@ -26,38 +26,6 @@ client = Groq(
 )
 
 
-def limpiar_texto(texto):
-    #Limpia una cadena de texto
-    #Quita (, . ;)
-    texto = re.sub(r",", "", texto)
-    texto = re.sub(r"\.", "", texto)
-    texto = re.sub(r";", "", texto)
-    texto = re.sub(r":", "", texto)
-    texto = re.sub(r"¢", "o", texto)
-    texto = re.sub(r"'", "", texto)
-    texto = re.sub(r"~", "", texto)
-    texto = re.sub(r"ñ", "n", texto)
-    texto = re.sub(r"Ñ", "n", texto)
-    #texto = re.sub(r")", "", texto)
-    texto = re.sub(r"-", "", texto)
-    
-    #Elimino numeros de la cadena
-    #texto = re.sub(r'[0-9]+', '', texto)
-    
-    #Elimino espacio de mas y tabulaciones
-    texto = re.sub(r"\s", " ", texto)
-    texto = re.sub(r"( ){2,}", " ", texto)
-    texto = re.sub(r"\A ", "", texto)
-    texto = re.sub(r'\n\s*\n', '\n', texto)
-    #Quitamos acentos
-    texto = re.sub(
-        r"([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+", r"\1", 
-        normalize( "NFD", texto), 0, re.I
-        )
-    #Dejamos todas las letras en minusculas
-    texto = texto.lower()
-    
-    return texto
 
 
 def generar_resumen(pregunta, horoscopo):
@@ -183,12 +151,6 @@ def mostrar_resultados(recomendacion):
 ############################################################################################################################
 ######---- Interfaz en Streamlit-----#######################################################################################
 ############################################################################################################################
-
-# Inicia ngrok con la URL de Streamlit, omitiendo la advertencia del navegador
-#public_url = ngrok.connect(8501,  bind_tls=True)
-
-# Mostrar la URL de ngrok generada
-#print(f"Streamlit is running on: {public_url}")
 
 
 # Descargar la imagen desde la URL
