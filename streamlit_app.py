@@ -70,7 +70,7 @@ def generar_resumen(pregunta, horoscopo):
     messages=[
         {
             "role": "system",
-            "content": "you are a helpful assistant."
+            "content": "Eres uastrólogo y experto en etimología de nombres."
         },
         {
             "role": "user",
@@ -112,7 +112,7 @@ def generar_recomendacion(nombre):
     messages=[
         {
             "role": "system",
-            "content": "you are a helpful assistant."
+            "content": "Eres uastrólogo y experto en etimología de nombres."
         },
         {
             "role": "user",
