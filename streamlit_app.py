@@ -18,7 +18,7 @@ ruta_imagen = "https://i.ibb.co/vcgGs9B/a10.png"
 # Establece la clave API para acceder a la API de Groq desde st.secrets
 api_key = st.secrets["general"]["GROQ_API_KEY"]
 
-modelo = 'llama-3.1-70b-versatile'
+modelo = 'llama-3.3-70b-versatile'
 
 # Inicializa el cliente de Groq usando la clave API
 client = Groq(
